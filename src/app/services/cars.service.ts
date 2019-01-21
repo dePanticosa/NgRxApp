@@ -4,6 +4,8 @@ import {Store} from '@ngrx/store';
 import {HttpClient} from '@angular/common/http';
 import {AddCar, DeleteCar, LoadCars, UpdateCar} from '../redux/cars.action';
 import {Car} from '../models/car.model';
+import {map} from 'rxjs/operators';
+
 
 @Injectable()
 export class CarsService {
@@ -14,9 +16,14 @@ export class CarsService {
               private store: Store<AppState>) {
   }
 
+  preloadCars() {
+    return this.http.get(CarsService.BASE_URL + 'cars');
+  }
+
   loadCars(): void {
-    this.http.get(CarsService.BASE_URL + 'cars')
-      .subscribe((cars: Car[]) => {
+    this.preloadCars()
+      .toPromise()
+      .then((cars: Car[]) => {
         this.store.dispatch(new LoadCars(cars));
       });
   }
@@ -36,9 +43,9 @@ export class CarsService {
   }
 
   updateCar(car: Car) {
-   this.http.put(CarsService.BASE_URL + 'cars/' + car.id, car)
-     .subscribe((c: Car) => {
-       this.store.dispatch(new UpdateCar(c));
-     });
+    this.http.put(CarsService.BASE_URL + 'cars/' + car.id, car)
+      .subscribe((c: Car) => {
+        this.store.dispatch(new UpdateCar(c));
+      });
   }
 }

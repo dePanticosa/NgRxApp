@@ -1,18 +1,18 @@
 {
   "cars": [
     {
-      "name": "Opel",
+      "name": "Ebychiq",
       "date": "21.01.19",
-      "model": "Insignia",
-      "id": 5,
-      "isSold": true
+      "model": "sdasd",
+      "isSold": false,
+      "id": 1
     },
     {
-      "name": "Ford",
+      "name": "Suka",
       "date": "21.01.19",
-      "model": "Focus",
-      "isSold": true,
-      "id": 6
+      "model": "Nah",
+      "isSold": false,
+      "id": 2
     }
   ]
 }
