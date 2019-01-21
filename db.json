@@ -1,18 +1,18 @@
 {
   "cars": [
     {
-      "id": 1,
       "name": "Opel",
-      "date": "12.12.2006",
-      "model": "Vectra C",
-      "isSold": false
+      "date": "21.01.19",
+      "model": "Insignia",
+      "id": 5,
+      "isSold": true
     },
     {
-      "id": 2,
-      "name": "Opel",
-      "date": "12.12.1990",
-      "model": "Vectra A",
-      "isSold": false
+      "name": "Ford",
+      "date": "21.01.19",
+      "model": "Focus",
+      "isSold": true,
+      "id": 6
     }
   ]
 }
