@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Car} from '../../models/car.model';
 import {AppState} from '../../redux/app.state';
 import {Store} from '@ngrx/store';
-import {DeleteCar} from '../../redux/cars.action';
+import {DeleteCar, UpdateCar} from '../../redux/cars.action';
 
 @Component({
   selector: 'app-car',
@@ -24,7 +24,7 @@ export class CarComponent implements OnInit {
   }
 
   onBuy() {
-    this.car.isSold = true;
+    this.store.dispatch(new UpdateCar(this.car));
   }
 
 }
