@@ -1,10 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
-import {CAR_ACTION, AddCar, LoadCars} from './cars.action';
-import {Observable} from 'rxjs';
-import {Action} from '@ngrx/store';
-import {catchError, map, mergeMap, switchMap} from 'rxjs/operators';
-import {Car} from '../models/car.model';
+import {CAR_ACTION} from './cars.action';
+import {map, mergeMap} from 'rxjs/operators';
 import {CarsService} from '../services/cars.service';
 
 
@@ -23,12 +20,4 @@ export class CarsEffect {
         )
       )
     );
-
 }
-
-// switchMap((action: AddCar) => {
-//     return this.service.preloadCars();
-//  },
-//  mergeMap((cars: Car[]) => {
-//      return new LoadCars(cars);
-//  })
