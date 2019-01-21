@@ -1,18 +1,5 @@
 {
   "cars": [
-    {
-      "name": "Ebychiq",
-      "date": "21.01.19",
-      "model": "sdasd",
-      "isSold": false,
-      "id": 1
-    },
-    {
-      "name": "Suka",
-      "date": "21.01.19",
-      "model": "Nah",
-      "isSold": false,
-      "id": 2
-    }
+
   ]
 }
