@@ -1,0 +1,18 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Opel",
+      "date": "12.12.2006",
+      "model": "Vectra C",
+      "isSold": false
+    },
+    {
+      "id": 2,
+      "name": "Opel",
+      "date": "12.12.1990",
+      "model": "Vectra A",
+      "isSold": false
+    }
+  ]
+}

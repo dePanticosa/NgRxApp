@@ -1,9 +1,9 @@
 <a class="list-group-item" [ngClass]="{'list-group-item-danger' : car.isSold}">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">{{car.name}}</h5>
-      <small>{{car.model}}</small>
+      <small>{{car.date}}</small>
     </div>
-    <p class="mb-1">{{car.date}}</p>
+    <p class="mb-1">{{car.model}}</p>
   <hr>
   <div class="row justify-content-end">
     <button (click)="onDelete()"
